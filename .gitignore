@@ -1,34 +1,63 @@
-# Python
+# ┌──────────────────────────────
+# │ Python
+# └──────────────────────────────
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*$py.class
+
+# Virtual environments
 *.pyo
 *.pyd
 .Python
 env/
 .venv/
 venv/
+env/
 
+# Environment variable files
 # 환경 변수
 .env
 .env.*
 
-# IDE
+# ┌──────────────────────────────
+# │ IDEs and Editors
+# └──────────────────────────────
+
 .vscode/
 .idea/
 *.sublime-workspace
 *.sublime-project
 
-# OS
+# macOS Finder
 .DS_Store
 Thumbs.db
 
-# Docker
+# ┌──────────────────────────────
+# │ Docker
+# └──────────────────────────────
+
+# override, local env, logs 등
+docker-compose.override.yml
 *.log
 logs/
 
 # 테스트/빌드
 .coverage
 .cache/
+# ┌──────────────────────────────
+# │ PostgreSQL data directory
+# └──────────────────────────────
+
+# 로컬 바인드 마운트된 PGDATA
+/pgdata/
+
+# ┌──────────────────────────────
+# │ Testing & Linting
+# └──────────────────────────────
+
+# pytest
 .pytest_cache/
 dist/
 build/
@@ -38,4 +67,10 @@ build/
 # 기타
 *.swp
 *.swo
-*~ 
+*~
+# mypy
+.mypy_cache/
+
+# coverage reports
+.coverage
+htmlcov/

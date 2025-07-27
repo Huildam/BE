@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    restart: always
+
+    # .env 파일 로드
+    env_file:
+      - .env
+
+    # Postgres 공식 이미지의 엔트리포인트가
+    # 아래 3개의 변수를 참조해서 DB를 초기화합니다.
+    environment:
+      POSTGRES_USER:   ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB:     ${POSTGRES_DB}
+
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi_app
+    restart: always
+    depends_on:
+      - db
+
+    # 동일한 .env 파일을 읽어서
+    # DATABASE_URL 을 동적으로 구성합니다.
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: >
+        postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}
+        @db:5432/${POSTGRES_DB}
+
+    volumes:
+      - ./app:/app
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    command: >
+      uvicorn main:app
+      --host 0.0.0.0
+      --port 8000
+      --reload

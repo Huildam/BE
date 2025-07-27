@@ -1,0 +1,55 @@
+version: '3.8'
+
+name: Huildam
+
+services:
+  fastapi:
+    build: .
+    container_name: fastapi_Huildam
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - ENV=docker
+      - DATABASE_URL=postgresql://postgres:qwer123!@db:5432/Huildam
+    depends_on:
+      - postgres
+    networks:
+      - fastapi-network
+
+  # PostgreSQL 데이터베이스
+  postgres:
+    image: bitnami/postgresql:latest
+    container_name: postgres_container_H
+    environment:
+      POSTGRES_DB: Huildam
+      POSTGRES_USER: Huildam
+      POSTGRES_PASSWORD: qwer123!
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/bitnami/postgresql  # bitnami 기준 디렉토리
+    networks:
+      - fastapi-network
+
+  # pgAdmin 서비스 추가
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_Huildam
+    environment:
+      PGADMIN_DEFAULT_EMAIL: Huildam@admin.com
+      PGADMIN_DEFAULT_PASSWORD: qwer123!
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - fastapi-network
+
+volumes:
+  postgres_data:
+
+networks:
+  fastapi-network:
+    driver: bridge 

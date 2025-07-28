@@ -1,9 +1,11 @@
+import os
+import uvicorn
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
 from api.v1.health import router as health_router
-from fastapi.responses import JSONResponse
-import uvicorn
-import os
+from db.session import init_table
 
 app = FastAPI()
 
@@ -18,7 +20,13 @@ app.add_middleware(
 
 app.include_router(health_router)
 
+@app.on_event("startup")
+async def on_startup():
+    init_table()
 
 if __name__ == "__main__":
+
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000) 
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+

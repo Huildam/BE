@@ -14,7 +14,8 @@ from sqlalchemy import text
 from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.orm import relationship
 
-from db.base import Base  # declarative_base()를 정의한 모듈에서 import
+from db.base import Base
+from models.timeline import Timeline
 
 
 class StatusEnum(enum.Enum):
@@ -77,6 +78,7 @@ class Event(Base):
         "Timeline",
         back_populates="event",
         cascade="all, delete-orphan",
+        order_by=Timeline.event_date
     )
 
     # id = Column(BigInteger, primary_key=True)

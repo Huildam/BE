@@ -3,11 +3,11 @@ from typing import List, Optional
 
 from pydantic import BaseModel
 
-from schemas.region import RegionResponse
-from schemas.timeline import TimelineItemResponse
+from schemas.region import RegionSchema
+from schemas.timeline import TimelineSchema
 
 
-class EventDetailResponse(BaseModel):
+class EventSchema(BaseModel):
     id: int
     title: str
     summary: str
@@ -16,10 +16,11 @@ class EventDetailResponse(BaseModel):
     created_at: datetime
     updated_at: datetime
     view_count: int
+    tags: List[str]
 
     # 관계된 객체들
-    region: RegionResponse
-    timelines: List[TimelineItemResponse] = []
+    region: RegionSchema
+    timelines: List[TimelineSchema] = []
 
     class Config:
         orm_mode = True

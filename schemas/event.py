@@ -19,7 +19,8 @@ class EventDetailResponse(BaseModel):
 
     # 관계된 객체들
     region: RegionResponse
-    timeline_items: List[TimelineItemResponse] = []
+    timelines: List[TimelineItemResponse] = []
 
     class Config:
         orm_mode = True
+

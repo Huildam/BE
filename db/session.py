@@ -6,9 +6,6 @@ from sqlalchemy.orm import sessionmaker
 
 from core.logging import logger
 from db.base import Base
-# 테이블을 자동으로 생성시킬 모델들을 import
-from models.user import User
-from models.region import Region
 
 DATABASE_URL = "postgresql+psycopg2://Huildam:qwer123!@postgres:5432/Huildam"
 
@@ -17,12 +14,10 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 def init_table():
-    # todo: 임시로 모든 테이블을 DROP 한 후 다시 Create함
     logger.info("init_table() called.")
-    logger.info("All table dropped.")
-    Base.metadata.drop_all(bind=engine)
-    logger.info("Create table with models.")
-    Base.metadata.create_all(bind=engine)
+    logger.info("Checking and creating tables if not exist...")
+    Base.metadata.create_all(bind=engine)  # ✅ 안전하게 테이블 생성
+    logger.info("Tables checked/created successfully.")
 
 
 def get_db():

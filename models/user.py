@@ -19,10 +19,12 @@ class User(Base):
     username = Column(String, unique=True)
     password = Column(String)
     role = Column(String)
-    accumulatedRewards = Column(Integer)
-    canWithdraw = Column(Boolean)
+    accumulated_rewards = Column(Integer)
+    can_withdraw = Column(Boolean)
     region_id = Column(Integer, ForeignKey("region.id"))
-    createdAt = Column(DateTime, default=datetime.now(timezone.utc))
-    updatedAt = Column(DateTime, default=datetime.now(timezone.utc))
+    created_at = Column(DateTime, default=datetime.now(timezone.utc))
+    updated_at = Column(DateTime, default=datetime.now(timezone.utc))
 
     region = relationship("Region")
+    created_events = relationship("Event", back_populates="created_by")
+

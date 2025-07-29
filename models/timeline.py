@@ -47,6 +47,6 @@ class Timeline(Base):
     )
 
     # 관계 설정
-    event = relationship("Event", back_populates="timeline_items")
+    event = relationship("Event", back_populates="timelines")
     region = relationship("Region")
     creator = relationship("User")

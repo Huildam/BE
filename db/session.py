@@ -7,6 +7,9 @@ from sqlalchemy.orm import sessionmaker
 from core.logging import logger
 from db.base import Base
 
+from models.user import User
+from models.region import Region
+
 DATABASE_URL = "postgresql+psycopg2://Huildam:qwer123!@postgres:5432/Huildam"
 
 engine = create_engine(DATABASE_URL)

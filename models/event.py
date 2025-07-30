@@ -43,32 +43,40 @@ class Event(Base):
     region_id = Column(Integer, ForeignKey("region.id"), nullable=False)
     region = relationship("Region", back_populates="events")
 
-    category = Column(String, nullable=False)
+    category = Column(String, nullable=True)
 
     # 상태 Enum
     status = Column(
         SAEnum(StatusEnum, name="event_status"), nullable=False, default=StatusEnum.new
     )
 
-    start_date = Column(Date, nullable=False)
-    end_date = Column(Date, nullable=True)
+    event_date = Column(Date, nullable=False)
 
     view_count = Column(Integer, nullable=False, default=0)
     like_count = Column(Integer, nullable=False, default=0)
 
     # PostgreSQL ARRAY로 태그 저장
-    tags = Column(ARRAY(String), nullable=False, default=list)
+    tags = Column(ARRAY(String), nullable=True, default=list)
 
-    source_type = Column(SAEnum(SourceTypeEnum, name="source_type"), nullable=False)
-    source_url = Column(String, nullable=False)
-    source_name = Column(String, nullable=False)
+    source_type = Column(SAEnum(SourceTypeEnum, name="source_type"), nullable=True)
+    source_url = Column(String, nullable=True)
+    source_name = Column(String, nullable=True)
 
     # 생성자(User) 테이블과의 FK 관계
     created_by_id = Column(Integer, ForeignKey("user.id"), nullable=False)
     created_by = relationship("User", back_populates="created_events")
 
-    created_at = Column(DateTime, nullable=False)
-    updated_at = Column(DateTime, nullable=False)
+    created_at = Column(
+        DateTime(timezone=True),
+        default=func.now(),        # INSERT 시점에 SQLAlchemy가 NOW() 호출
+        nullable=False
+    )
+    updated_at = Column(
+        DateTime(timezone=True),
+        default=func.now(),        # INSERT 시점에도 NOW()
+        onupdate=func.now(),       # UPDATE 시에 NOW()로 자동 갱신
+        nullable=False
+    )
 
     is_verified = Column(Boolean, nullable=False, default=False)
     verified_at = Column(DateTime, nullable=True)

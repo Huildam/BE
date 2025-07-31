@@ -1,6 +1,6 @@
-from pydantic import BaseModel
+from schemas.base import CamelModel
 
 
-class UserSchema(BaseModel):
+class UserSchema(CamelModel):
     id: int
     username: str

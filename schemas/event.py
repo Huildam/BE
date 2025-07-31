@@ -23,9 +23,6 @@ class EventSchema(CamelModel):
     region: RegionSchema
     timelines: List[TimelineSchema] = []
 
-    class Config:
-        orm_mode = True
-
 
 class EventFormSchema(CamelModel):
     user_id: int

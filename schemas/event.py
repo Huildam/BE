@@ -1,16 +1,12 @@
 from datetime import date, datetime
 from typing import List, Optional
 
-from pydantic import BaseModel
-from pydantic import ConfigDict
-from pydantic.alias_generators import to_camel
-from pydantic.alias_generators import to_snake
-
+from schemas.base import CamelModel
 from schemas.region import RegionSchema
 from schemas.timeline import TimelineSchema
 
 
-class EventSchema(BaseModel):
+class EventSchema(CamelModel):
     id: int
     title: str
     summary: str
@@ -19,6 +15,9 @@ class EventSchema(BaseModel):
     updated_at: datetime
     view_count: int
     tags: List[str]
+    source_name: str
+    source_url:  str
+    source_type: str
 
     # 관계된 객체들
     region: RegionSchema
@@ -28,11 +27,7 @@ class EventSchema(BaseModel):
         orm_mode = True
 
 
-class EventFormSchema(BaseModel):
-    model_config = ConfigDict(
-        alias_generator=to_camel,
-        populate_by_name=True
-    )
+class EventFormSchema(CamelModel):
     user_id: int
     region_id: int
     title: str

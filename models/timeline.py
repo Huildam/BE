@@ -24,15 +24,12 @@ class Timeline(Base):
     title = Column(String(255), nullable=False)
     summary = Column(Text, nullable=False)
     event_date = Column(Date, nullable=False)
-    source_name = Column(String(255), nullable=False)
-    source_url = Column(String(500), nullable=True)
-    source_type = Column(
-        String(20),
-        nullable=False,
-    )
+    source_name = Column(String(255), nullable=False, default="")
+    source_url = Column(String(500), nullable=False, default="")
+    source_type = Column(String(20), nullable=False, default="")
 
-    created_by = Column(BigInteger, ForeignKey("user.id"), nullable=True)
-    creator = relationship("User")
+    created_by_id = Column(BigInteger, ForeignKey("user.id"), nullable=True)
+    created_by = relationship("User")
 
     is_verified = Column(Boolean, server_default=text("FALSE"), nullable=False)
     verified_at = Column(DateTime, nullable=True)
@@ -42,9 +39,3 @@ class Timeline(Base):
         nullable=False,
     )
     is_active = Column(Boolean, server_default=text("TRUE"), nullable=False)
-
-    __table_args__ = (
-        CheckConstraint(
-            "source_type IN ('news','user')", name="ck_timeline_source_type"
-        ),
-    )

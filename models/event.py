@@ -18,19 +18,6 @@ from db.base import Base
 from models.timeline import Timeline
 
 
-class StatusEnum(enum.Enum):
-    pending = "pending"  # 등록 대기중
-    new = "new"  # 새로 등록됨
-    progress = "progress"  # 진행중
-    done = "done"  # 종결됨
-
-
-class SourceTypeEnum(enum.Enum):
-    news = "news"  # 기사
-    official = "official"  # 공공기관
-    user = "user"  # 일반인 제보
-
-
 class Event(Base):
     __tablename__ = "event"
 
@@ -46,10 +33,7 @@ class Event(Base):
     category = Column(String, nullable=True)
 
     # 상태 Enum
-    status = Column(
-        SAEnum(StatusEnum, name="event_status"), nullable=False, default=StatusEnum.new
-    )
-
+    status = Column(String, nullable=False, default="new")
     event_date = Column(Date, nullable=False)
 
     view_count = Column(Integer, nullable=False, default=0)
@@ -58,9 +42,9 @@ class Event(Base):
     # PostgreSQL ARRAY로 태그 저장
     tags = Column(ARRAY(String), nullable=True, default=list)
 
-    source_type = Column(SAEnum(SourceTypeEnum, name="source_type"), nullable=True)
-    source_url = Column(String, nullable=True)
-    source_name = Column(String, nullable=True)
+    source_type = Column(String, nullable=False, default="")
+    source_url = Column(String, nullable=False, default="")
+    source_name = Column(String, nullable=False, default="")
 
     # 생성자(User) 테이블과의 FK 관계
     created_by_id = Column(Integer, ForeignKey("user.id"), nullable=False)
@@ -88,31 +72,3 @@ class Event(Base):
         cascade="all, delete-orphan",
         order_by=Timeline.event_date
     )
-
-    # id = Column(BigInteger, primary_key=True)
-    # title = Column(String(255), nullable=False)
-    # region_name = Column(String(100), nullable=True)
-    # summary = Column(Text, nullable=False)
-    # event_date = Column(Date, nullable=False)
-    # region_id = Column(Integer, ForeignKey("region.id"), nullable=True)
-    # created_at = Column(
-    #     DateTime,
-    #     server_default=text("CURRENT_TIMESTAMP"),
-    #     nullable=False,
-    # )
-    # updated_at = Column(
-    #     DateTime,
-    #     server_default=text("CURRENT_TIMESTAMP"),
-    #     onupdate=func.current_timestamp(),
-    #     nullable=False,
-    # )
-    # is_active = Column(Boolean, server_default=text("TRUE"), nullable=False)
-    # view_count = Column(Integer, server_default=text("0"), nullable=False)
-
-    # # 관계 설정
-    # region = relationship("Region")
-    # timeline_items = relationship(
-    #     "Timeline",
-    #     back_populates="event",
-    #     cascade="all, delete-orphan",
-    # )

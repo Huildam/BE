@@ -18,7 +18,7 @@ from schemas.timeline import TimelineFormSchema
 router = APIRouter()
 
 
-@router.get("/", response_model=List[EventSchema], status_code=200)
+@router.get("", response_model=List[EventSchema], status_code=200)
 def get_total_event(db: Session = Depends(get_db)):
     return get_all_event(db)
 

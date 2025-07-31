@@ -65,7 +65,6 @@ class Event(Base):
     is_verified = Column(Boolean, nullable=False, default=False)
     verified_at = Column(DateTime, nullable=True)
     
-    region = relationship("Region")
     timelines = relationship(
         "Timeline",
         back_populates="event",

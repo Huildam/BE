@@ -10,11 +10,11 @@ class TimelineSchema(CamelModel):
     id: int
     title: str
     summary: str
-    created_by: UserSchema
     event_date: date
     source_name: str
     source_type: str
     source_url: str
+    created_by: UserSchema
     is_verified: bool
     verified_at: Optional[datetime] = None
     created_at: datetime

@@ -19,15 +19,9 @@ class TimelineSchema(CamelModel):
     verified_at: Optional[datetime] = None
     created_at: datetime
 
-    class Config:
-        orm_mode = True
-
 
 class TimelineFormSchema(CamelModel):
     user_id: int
     title: str
     summary: str
     event_date: date
-
-    class Config:
-        orm_mode = True

@@ -1,9 +1,16 @@
+import os
+import uvicorn
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
 from api.v1.health import router as health_router
-from fastapi.responses import JSONResponse
-import uvicorn
-import os
+from api.v1.endpoints.events import router as event_router
+from api.v1.endpoints.region import router as region_router
+from api.v1.auth import router as auth_router
+from api.v1.summarize import router as summarize_router
+from db.session import init_table
+from services.summarize_service import load_model
 
 app = FastAPI()
 
@@ -16,9 +23,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(health_router)
+app.include_router(health_router, prefix="/health", tags=["health"])
+app.include_router(auth_router, prefix="/auth", tags=["auth"])
+app.include_router(summarize_router, prefix="/summarize", tags=["summarize"])
+app.include_router(event_router, prefix="/events", tags=["event"])
+app.include_router(region_router, prefix="/regions", tags=["regions"])
 
+
+@app.on_event("startup")
+async def on_startup():
+    init_table()
+    # T5 모델 로드
+    load_model()
 
 if __name__ == "__main__":
+
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000) 
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+

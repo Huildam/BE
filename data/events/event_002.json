@@ -1,0 +1,123 @@
+[
+  {
+  "title": "수도권 '세 모녀' 무자본 갭투자 전세사기",
+  "summary": "2017년부터 시작된 ‘세 모녀’의 무자본 갭투자 전세사기로 수도권(서울·인천) 빌라 약 500채, 피해자 약 355명, 피해금액 약 795억 원 규모의 사태로 발전했으며, 수사와 재판, 최종 대법 판결이 이어졌습니다.",
+  "description": "이 사건은 모친 김씨와 두 딸이 공모해 수백 채의 수도권 빌라를 무자본 갭투자 방식으로 사들인 후, 수백 명의 전세 세입자로부터 보증금을 가로챈 전세사기입니다. 2022년 구속 기소 이후, 검찰은 추가 피해 규모를 확인했고, 2023년 1심 재판에서 피해자 수 356명, 피해금액 약 795억 원으로 확인되었습니다. 2024년 대법원에서 징역 10년형이 확정되며 사회적 주목을 받았습니다. 이 사건은 무자본 갭투자 전세사기의 전형으로 평가됩니다.",
+  "eventDate": "2022-06-26",
+  "region_id": 17,
+  "createdAt": "2023-05-29T16:03:00",
+  "updatedAt": "2024-12-16T17:26:12",
+  "viewCount": 38800,
+  "category": "전세사기",
+  "timelines": [
+      {
+        "title": "모친 김씨, 빌라 500채 수법으로 183억 전세보증금 챙겨 구속 기소",
+        "summary": "2017년부터 서울 강서·관악구 등 수도권 빌라 500여 채를 갭투자로 매입해 세입자 85명으로부터 약 183억 원의 전세보증금을 편취한 혐의로 모친 김씨 구속 기소됨.",
+        "eventDate": "2022-06-26",
+        "sourceName": "경향신문",
+        "sourceUrl": "https://www.khan.co.kr/article/202206261628011",
+        "regionId": 17,
+        "sourceType": "news",
+        "isVerified": true,
+        "verifiedAt": "2022-06-26T23:02:00",
+        "createdAt": "2022-06-26T16:28:00",
+        "isActive": true
+      },
+      {
+        "title": "검찰, 업체와 공모해 보증금 298억 챙긴 정황 추가 확인",
+        "summary": "검찰 수사에서 분양대행업체와 공모해 세입자 136명으로부터 전세보증금 약 298억 원을 편취한 정황이 밝혀져 추가 기소됨.",
+        "eventDate": "2022-07-11",
+        "sourceName": "경향신문",
+        "sourceUrl": "https://www.khan.co.kr/article/202207111636021",
+        "regionId": 17,
+        "sourceType": "news",
+        "isVerified": true,
+        "verifiedAt": "2022-07-11T17:00:00",
+        "createdAt": "2022-07-11T16:36:00",
+        "isActive": true
+      },
+      {
+        "title": "1심, 모친 김씨에게 징역 10년 선고 및 피해자 356명·795억 규모 인정",
+        "summary": "2023년 7월 12일 1심 법원은 김씨에게 징역 10년을 선고하며, 피해자 약 356명·피해금 약 795억 원 신고된 사실을 확인.",
+        "eventDate": "2023-07-12",
+        "sourceName": "KBS 뉴스",
+        "sourceUrl": "https://news.kbs.co.kr/news/view.do?ncd=7722460",
+        "regionId": 17,
+        "sourceType": "news",
+        "isVerified": true,
+        "verifiedAt": "2023-07-12T23:44:32",
+        "createdAt": "2023-07-12T22:21:00",
+        "isActive": true
+      }
+    ]
+  },
+  {
+  "title": "수원 일가족 전세사기 항소심 중형 선고",
+  "summary": "경기도 수원 일가족이 수십 채 빌라를 무자본 갭투자로 운영하며 전세보증금 약 760억 원을 편취한 사건으로, 항소심에서도 최장 징역 15년이 선고되었습니다.",
+  "description": "",
+  "eventDate": "2025-06-25",
+  "region_id": 118,
+  "createdAt": "2025-06-25T11:00:00",
+  "updatedAt": "2025-06-25T11:00:00",
+    "viewCount":28800,
+  "category": "전세사기",
+  "timelines": [
+      {
+        "title": "항소심, 전세보증금 760억 편취 일가족에 징역 15년 선고",
+        "summary": "법원은 2심에서도 사기죄 최대형인 징역 15년형을 선고함.",
+        "eventDate": "2025-06-25",
+        "sourceName": "조선일보",
+        "sourceUrl": "https://www.chosun.com/national/court_law/2025/06/25/PIUUDWHVWBF45D7E7TIRK3FNEQ/",
+        "regionId": 118,
+        "sourceType": "news",
+        "isVerified": true
+      }
+    ]
+  },
+  {
+  "title": "전주 무자본 갭투자 전세사기 조직 검거",
+  "summary": "전북 전주시 일가 무자본 갭투자로 빌라 19채를 취득하고 세입자 보증금을 편취한 사건으로, 피해자는 총 235명, 피해금액은 약 173억 원에 달합니다.",
+  "description": "전북 전주시에서 일가족이 무자본 갭투자 수법으로 빌라 19채를 취득한 후 세입자 235명으로부터 보증금을 편취한 사건입니다. 피해 금액은 약 173억 원에 이르며, 경찰은 조직을 검거하고 수사를 진행 중입니다. 해당 사건은 지역사회에 큰 충격을 주었으며, 무자본 갭투자 전세사기 범죄의 심각성을 보여줍니다.",
+  "eventDate": "2024-10-30",
+  "region_id": 265,
+  "createdAt": "2024-10-30T11:00:00",
+  "updatedAt": "2024-10-30T14:36:00",
+    "viewCount":27800,
+  "category": "전세사기",
+  "timelines": [
+      {
+        "title": "경찰, 전주 19채 무자본 갭투자 전세사기 조직 검거",
+        "summary": "경찰이 범죄조직 총책과 공인중개사 등 수명을 기소하고 범죄수익 몰수 조치 검토.",
+        "eventDate": "2024-10-30",
+        "sourceName": "뉴시스",
+        "sourceUrl": "https://www.newsis.com/view/NISX20241030_0002939473",
+        "regionId": 265,
+        "sourceType": "news",
+        "isVerified": true
+      }
+    ]
+  },
+  {
+  "title": "서울 일부 무자본 갭투자 전세사기 일당 1심 기소",
+  "summary": "서울 영등포·금천·동작구 등에서 원룸형 다가구주택 4채를 무자본 갭투자로 운영한 일당이 155명의 세입자로부터 약 138억 원을 편취한 혐의로 구속기소됨.",
+  "description": "이 사건은 서울 영등포구, 금천구, 동작구 일대에서 원룸형 다가구주택 4채를 무자본 갭투자 방식으로 운영하며, 세입자 155명으로부터 약 138억 원의 전세보증금을 편취한 혐의로 일당이 구속기소된 사건입니다. 1심 재판이 진행 중이며, 피해 규모가 커 사회적 파장이 일고 있습니다.",
+  "eventDate": "2024-07-18",
+  "region_id": 1,
+  "createdAt": "2024-07-18T16:08:00",
+  "updatedAt": "2024-07-18T16:08:00",
+    "viewCount":18800,
+  "category": "전세사기",
+  "timelines": [
+      {
+        "title": "서울 무자본 갭투자 전세사기 일당 1심 재판 진행",
+        "summary": "피해자 155명, 전세보증금 138억 원 규모로 1심 재판에 회부됨.",
+        "eventDate": "2024-07-18",
+        "sourceName": "연합뉴스",
+        "sourceUrl": "https://www.follaw.co.kr/news/102358",
+        "regionId": 1,
+        "sourceType": "news",
+        "isVerified": true
+      }
+    ]
+  }
+]

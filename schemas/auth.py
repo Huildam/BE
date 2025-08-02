@@ -1,3 +1,4 @@
+from datetime import datetime
 from pydantic import BaseModel, EmailStr
 from typing import Optional
 
@@ -20,4 +21,4 @@ class UserResponse(BaseModel):
     email: str
     role: str
     region_id: Optional[int] = None
-    created_at: str 
+    created_at: datetime 

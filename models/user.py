@@ -23,3 +23,5 @@ class User(Base):
     created_at = Column(DateTime, default=datetime.utcnow)
 
     region = relationship("Region")
+    created_events = relationship("Event", back_populates="created_by")
+

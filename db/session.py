@@ -1,4 +1,3 @@
-import logging
 import os
 import psycopg2
 from sqlalchemy import create_engine

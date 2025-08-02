@@ -13,6 +13,7 @@ class Region(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
     level = Column(Integer)
-    parent_id = Column(Integer, ForeignKey("region.id"))
+    parent_id = Column(Integer, ForeignKey("region.id"), nullable=True)
 
     parent = relationship("Region", remote_side=[id])
+    events = relationship("Event", back_populates="region")

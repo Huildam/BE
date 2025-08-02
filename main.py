@@ -6,6 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from api.v1.health import router as health_router
 from api.v1.endpoints.events import router as event_router
+from api.v1.endpoints.region import router as region_router
 from api.v1.auth import router as auth_router
 from api.v1.summarize import router as summarize_router
 from db.session import init_table
@@ -26,6 +27,7 @@ app.include_router(health_router, prefix="/health", tags=["health"])
 app.include_router(auth_router, prefix="/auth", tags=["auth"])
 app.include_router(summarize_router, prefix="/summarize", tags=["summarize"])
 app.include_router(event_router, prefix="/events", tags=["event"])
+app.include_router(region_router, prefix="/regions", tags=["regions"])
 
 
 @app.on_event("startup")

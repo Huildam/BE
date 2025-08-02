@@ -1,0 +1,55 @@
+{
+  "title": "달콤왕가탕후루 제조공장 식품위생법 위반 적발",
+  "summary": "2023년 11월 초, 부산 동래구의 달콤왕가탕후루 제조공장이 제조일자 미표기, 자가품질검사 미실시 등 식품위생법 위반으로 적발되었고, 이후 본사가 외부 검사 및 시정조치를 발표.",
+  "description": "",
+  "eventDate": "2023-11-03",
+  "region_id": 33,
+  "createdAt": "2023-11-03T12:00:00",
+  "updatedAt": "2023-11-07T14:00:00",
+  "viewCount": 0,
+  "category": "식품안전",
+  "timelines": [
+    {
+      "title": "동래구 제조공장서 자가품질검사 미실시·제조일자 미표기 적발",
+      "description": "부산 동래구의 달콤왕가탕후루 제조공장이 제조일자 표시 누락 및 자가품질검사 미실시에 대해 식약처 합동 점검에서 적발됨.",
+      "eventDate": "2023-11-03",
+      "sourceName": "세계일보",
+      "sourceUrl": "https://www.segye.com/newsView/20231103517181",
+      "regionId": 33,
+      "sourceType": "news",
+      "createdBy": null,
+      "isVerified": true,
+      "verifiedAt": "2023-11-03T18:00:00",
+      "createdAt": "2023-11-03T18:01:00",
+      "isActive": true
+    },
+    {
+      "title": "외부기관 검사 결과 '이물질 전혀 검출되지 않음' 발표",
+      "description": "적발 이틀 만에 본사가 외부 전문기관 의뢰 검사 결과, 이물질이 전혀 검출되지 않았으며 시험 성적서를 공개했다고 밝힘.",
+      "eventDate": "2023-11-05",
+      "sourceName": "더팩트",
+      "sourceUrl": "https://news.tf.co.kr/read/economy/2053640.htm",
+      "regionId": 33,
+      "sourceType": "news",
+      "createdBy": null,
+      "isVerified": true,
+      "verifiedAt": "2023-11-06T15:47:00",
+      "createdAt": "2023-11-06T15:50:00",
+      "isActive": true
+    },
+    {
+      "title": "초음파 세척기 도입·저당 감미료 개발 등 추가 조치 발표",
+      "description": "본사는 위생 강화 프로세스로 초음파 과일 세척기 도입, 저당 대체 감미료 개발 등을 향후 조치 계획으로 발표.",
+      "eventDate": "2023-11-07",
+      "sourceName": "매일경제",
+      "sourceUrl": "https://www.mk.co.kr/news/business/10868061",
+      "regionId": 33,
+      "sourceType": "news",
+      "createdBy": null,
+      "isVerified": true,
+      "verifiedAt": "2023-11-07T11:32:40",
+      "createdAt": "2023-11-07T11:35:00",
+      "isActive": true
+    }
+  ]
+} 

@@ -13,17 +13,14 @@ from db.base import Base
 
 
 class User(Base):
-    __tablename__ = "user"
+    __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
-    username = Column(String, unique=True)
-    password = Column(String)
-    role = Column(String)
-    accumulated_rewards = Column(Integer)
-    can_withdraw = Column(Boolean)
+    email = Column(String(255), unique=True, nullable=False)
+    password_hash = Column(String(255), nullable=False)
+    role = Column(String(20), nullable=False)
     region_id = Column(Integer, ForeignKey("region.id"))
-    created_at = Column(DateTime, default=datetime.now(timezone.utc))
-    updated_at = Column(DateTime, default=datetime.now(timezone.utc))
+    created_at = Column(DateTime, default=datetime.utcnow)
 
     region = relationship("Region")
     created_events = relationship("Event", back_populates="created_by")

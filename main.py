@@ -6,6 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from api.v1.health import router as health_router
 from api.v1.endpoints.events import router as event_router
+from api.v1.auth import router as auth_router
 from db.session import init_table
 
 app = FastAPI()
@@ -19,8 +20,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(health_router)
-app.include_router(event_router, prefix="/events")
+app.include_router(health_router, prefix="/health", tags=["health"])
+app.include_router(auth_router, prefix="/auth", tags=["auth"])
 
 @app.on_event("startup")
 async def on_startup():

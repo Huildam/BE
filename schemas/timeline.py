@@ -6,7 +6,7 @@ from schemas.base import CamelModel
 from schemas.auth import UserResponse
 
 
-class TimelineSchema(CamelModel):
+class TimelineResponse(CamelModel):
     id: int
     title: str
     summary: str
@@ -20,7 +20,7 @@ class TimelineSchema(CamelModel):
     created_at: datetime
 
 
-class TimelineFormSchema(CamelModel):
+class TimelineCreateRequest(CamelModel):
     user_id: int
     title: str
     summary: str

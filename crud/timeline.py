@@ -1,10 +1,10 @@
 
 from db import session
 from models.timeline import Timeline
-from schemas.timeline import TimelineFormSchema
+from schemas.timeline import TimelineCreateRequest
 
 
-def create_timeline(db: session, event_id: int, timeline_form: TimelineFormSchema) -> Timeline:
+def create_timeline(db: session, event_id: int, timeline_form: TimelineCreateRequest) -> Timeline:
     data = timeline_form.model_dump()
     if "user_id" in data:
         data["created_by_id"] = data.pop("user_id")

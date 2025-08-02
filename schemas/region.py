@@ -2,7 +2,7 @@ from typing import Optional
 from pydantic import BaseModel
 
 
-class RegionSchema(BaseModel):
+class RegionResponse(BaseModel):
     id: int
     name: str
-    parent: Optional['RegionSchema'] = None;
+    parent: Optional['RegionResponse'] = None;

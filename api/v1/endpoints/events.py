@@ -1,8 +1,8 @@
-from fastapi import APIRouter, Response
+from fastapi import APIRouter, Query, Response
 from fastapi import HTTPException
 from fastapi import Depends
 from sqlalchemy.orm import Session
-from typing import Dict, List, Union
+from typing import Dict, List, Optional, Union
 
 from db.session import get_db
 from crud.event import create_event
@@ -21,8 +21,14 @@ router = APIRouter()
 
 
 @router.get("", response_model=List[EventResponse], status_code=200)
-def get_total_event(db: Session = Depends(get_db)):
-    return get_all_event(db)
+def get_total_event(
+    category: Optional[str] = Query(None, description="필터링할 카테고리"),
+    region_id: Optional[int] = Query(None, description="필터링할 지역 ID"),
+    db: Session = Depends(get_db)):
+    return get_all_event(db, {
+        "category": category,
+        "region_id": region_id
+    })
 
 
 @router.get("/{event_id}", response_model=EventResponse, status_code=200)

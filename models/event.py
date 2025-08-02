@@ -37,14 +37,6 @@ class Event(Base):
     event_date = Column(Date, nullable=False)
 
     view_count = Column(Integer, nullable=False, default=0)
-    like_count = Column(Integer, nullable=False, default=0)
-
-    # PostgreSQL ARRAY로 태그 저장
-    tags = Column(ARRAY(String), nullable=True, default=list)
-
-    source_type = Column(String, nullable=False, default="")
-    source_url = Column(String, nullable=False, default="")
-    source_name = Column(String, nullable=False, default="")
 
     # 생성자(User) 테이블과의 FK 관계
     created_by_id = Column(Integer, ForeignKey("users.id"), nullable=False)

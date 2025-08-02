@@ -6,8 +6,15 @@ from models.event import Event
 from schemas.event import EventCreateRequest
 
 
-def get_all_event(db: Session) -> List[Event]:
-    return db.query(Event).all()
+def get_all_event(db: Session, query_parameter: dict) -> List[Event]:
+    category = query_parameter.get("category")
+    region_id = query_parameter.get("region_id")
+    query = db.query(Event)
+    if category:
+        query = query.filter(Event.category == category)
+    if region_id:
+        query = query.filter(Event.region_id == region_id)
+    return query.all()
 
 
 def get_event_by_id(db: Session, event_id: int) -> Event:

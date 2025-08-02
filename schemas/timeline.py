@@ -21,7 +21,14 @@ class TimelineResponse(CamelModel):
 
 
 class TimelineCreateRequest(CamelModel):
-    user_id: int
     title: str
     summary: str
     event_date: date
+    source_name: str
+    source_type: str
+    source_url: str
+    created_by_id: Optional[int] = None
+    is_verified: bool
+    verified_at: Optional[datetime] = None
+    created_at: datetime
+    is_active: Optional[bool] = True

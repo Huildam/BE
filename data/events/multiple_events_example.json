@@ -1,0 +1,65 @@
+[
+  {
+    "title": "달콤왕가탕후루 제조공장 식품위생법 위반 적발",
+    "summary": "2023년 11월 초, 부산 동래구의 달콤왕가탕후루 제조공장이 제조일자 미표기, 자가품질검사 미실시 등 식품위생법 위반으로 적발되었고, 이후 본사가 외부 검사 및 시정조치를 발표.",
+    "eventDate": "2023-11-03",
+    "region_id": 26170,
+    "createdAt": "2023-11-03T12:00:00",
+    "updatedAt": "2023-11-07T14:00:00",
+    "viewCount": 0,
+    "category": "식품안전",
+    "timelines": [
+      {
+        "title": "동래구 제조공장서 자가품질검사 미실시·제조일자 미표기 적발",
+        "description": "부산 동래구의 달콤왕가탕후루 제조공장이 제조일자 표시 누락 및 자가품질검사 미실시에 대해 식약처 합동 점검에서 적발됨.",
+        "eventDate": "2023-11-03",
+        "sourceName": "세계일보",
+        "sourceUrl": "https://www.segye.com/newsView/20231103517181",
+        "sourceType": "news",
+        "createdBy": 1,
+        "isVerified": true,
+        "verifiedAt": "2023-11-03T18:00:00",
+        "createdAt": "2023-11-03T18:01:00",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "title": "부산 해운대구 교통사고 다발 지점 개선 공사 완료",
+    "summary": "부산 해운대구의 교통사고 다발 지점인 해운대로와 센텀리더스마크 교차로 개선 공사가 완료되어 교통 안전이 크게 향상됨.",
+    "eventDate": "2023-11-05",
+    "region_id": 26350,
+    "createdAt": "2023-11-05T09:00:00",
+    "updatedAt": "2023-11-05T17:00:00",
+    "viewCount": 0,
+    "category": "교통안전",
+    "timelines": [
+      {
+        "title": "해운대로-센텀리더스마크 교차로 개선 공사 완료",
+        "description": "부산 해운대구 해운대로와 센텀리더스마크 교차로의 개선 공사가 완료되어 신호등 설치 및 차선 정리가 완료됨.",
+        "eventDate": "2023-11-05",
+        "sourceName": "부산일보",
+        "sourceUrl": "https://www.busan.com/view/busan/view.php?code=20231105000001",
+        "sourceType": "news",
+        "createdBy": 1,
+        "isVerified": true,
+        "verifiedAt": "2023-11-05T10:00:00",
+        "createdAt": "2023-11-05T10:05:00",
+        "isActive": true
+      },
+      {
+        "title": "교통사고 발생률 30% 감소 확인",
+        "description": "개선 공사 완료 후 1개월간 교통사고 발생률이 30% 감소한 것으로 확인되어 개선 효과가 입증됨.",
+        "eventDate": "2023-12-05",
+        "sourceName": "부산교통공단",
+        "sourceUrl": "https://www.busan.go.kr/traffic/news/20231205000001",
+        "sourceType": "official",
+        "createdBy": 1,
+        "isVerified": true,
+        "verifiedAt": "2023-12-05T14:00:00",
+        "createdAt": "2023-12-05T14:30:00",
+        "isActive": true
+      }
+    ]
+  }
+] 

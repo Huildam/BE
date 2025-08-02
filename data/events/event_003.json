@@ -1,0 +1,95 @@
+[
+  {
+  "title": "경북 영덕 대형 산불로 다수 인명 피해",
+  "summary": "2025년 3월, 강풍을 타고 확산된 산불로 경북 영덕 일대 약 2만㏊가 소실되었고 인명 피해는 최소 26명에서 최대 28명에 달했으며, 요양원·도로 차 내부 승객 등 다방면에서 피해가 발생했습니다.",
+  "description": "의성에서 시작된 산불이 경북 영덕으로 확산되며 요양원, 마을 주민, 차량 탑승자까지 인명 피해가 발생했습니다. 특히 화염이 차량으로 번지며 차내 인명 사고가 다수 발생했고, 진화 작업 중에도 감시원 등 여러 희생자가 발생했습니다. 피해 규모와 인명 손실 면에서 2025년 들어 최대 재난 사례 중 하나입니다.",
+  "eventDate": "2025-03-26",
+  "region_id": 214,
+  "category": "인명피해",
+    "viewCount": 30015,
+  "timelines": [
+      {
+        "title": "영덕에서만 최소 6명 사망…화염 차량 폭발 사고 발생",
+        "summary": "밤사이 대피 중 차 안에서 불에 탄 차량이 폭발하며 6명이 사망.",
+        "eventDate": "2025-03-26",
+        "sourceName": "KBS 뉴스",
+        "sourceUrl": "https://news.kbs.co.kr/news/view.do?ncd=8210528",
+        "regionId": 214,
+        "sourceType": "news",
+        "isVerified": true
+      },
+      {
+        "title": "산불 감시원 등 추가 사망자 포함, 사망자 27명으로 증가",
+        "summary": "60대 산불 감시원이 현장에서 숨지며 영덕 산불 사망자 수는 27명으로 늘어남.",
+        "eventDate": "2025-03-27",
+        "sourceName": "SBS 뉴스",
+        "sourceUrl": "https://news.sbs.co.kr/news/endPage.do?cooper=SBSNEWSEND&news_id=N1008039266",
+        "regionId": 214,
+        "sourceType": "news",
+        "isVerified": true
+      },
+      {
+        "title": "산불 사망자 28명으로 늘어, 재난지역 확대 지정",
+        "summary": "3월 28일 기준, 영남권 산불로 인한 사망자가 28명으로 늘어났고, 정부는 안동·청송·영양·영덕을 모두 특별재난지역으로 추가 지정했습니다.",
+        "eventDate": "2025-03-28",
+        "sourceName": "SBS 뉴스 / 한국경제 / 연합뉴스TV",
+        "sourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008040199",
+        "regionId": 214,
+        "sourceType": "news",
+        "isVerified": true
+      }
+    ]
+  },
+  {
+  "title": "밀양 세종병원 화재로 다수 사망",
+  "summary": "2018년 1월 26일 경남 밀양시 세종병원에서 발생한 화재로 사망자 31명에서 최대 41명, 부상자 81명에서 153명에 달하는 대형 인명피해가 발생했습니다.",
+  "description": "응급실에서 시작된 화재 후 상층부로 급속 확산되며 주로 노인과 거동 불편 환자 중심으로 인명 피해가 컸습니다. 스프링클러 미설치, 소방안전 체계 결여, 초기 대응 지연 등이 복합 작용했으며, 이후 정부의 유족 지원 및 화재관리 대책 논의가 장기간 이어졌습니다.",
+  "eventDate": "2018-01-26",
+  "region_id": 229,
+  "category": "인명피해",
+    "viewCount": 20115,
+  "timelines": [
+      {
+        "title": "응급실에서 화재 발생 … 초기 사망자 31명 집계",
+        "summary": "국내 언론과 CBS·AP통신 보도에 따르면 초기 사망자 31명, 중상자 14명 포함 81명 부상 보고됨.",
+        "eventDate": "2018-01-26",
+        "sourceName": "CBS News / AP",
+        "sourceUrl": "https://www.cbsnews.com/news/south-korea-hospital-fire-sejong-hospital-miryang-today-2018-01-26/",
+        "regionId": 229,
+        "sourceType": "news",
+        "isVerified": true
+      },
+      {
+        "title": "문재인 대통령 현장 방문…정부 조사 지시",
+        "summary": "문재인 대통령이 화재 다음 날인 27일 현장을 방문해 수습 지원 지시 및 재발 방지 위한 공식 조사를 명령.",
+        "eventDate": "2018-01-27",
+        "sourceName": "Reuters",
+        "sourceUrl": "https://www.reuters.com/article/us-southkorea-fire/south-koreas-moon-visits-hospital-fire-scene-agonizes-over-series-of-disasters-idUSKBN1FF04N",
+        "regionId": 229,
+        "sourceType": "news",
+        "isVerified": true
+      },
+      {
+        "title": "보건복지부, 피해자 지원 및 수습 체계 마련",
+        "summary": "1월 29일 오후 중앙사고수습본부 브리핑에서 사망자 39명·중상자 8명·경상자 138명 등 지원 현황 발표.",
+        "eventDate": "2018-01-29",
+        "sourceName": "보건복지부 중앙사고수습본부",
+        "sourceUrl": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156251294",
+        "regionId": 229,
+        "sourceType": "news",
+        "isVerified": true
+      },
+      {
+        "title": "의협, 전국 의사대표자대회 긴급 연기 결정",
+        "summary": "대한의사협회는 화재 참사에 애도 뜻을 표하며 1월 28일 예정된 전국 의사대표자대회를 잠정 연기.",
+        "eventDate": "2018-01-27",
+        "sourceName": "메디포뉴스",
+        "sourceUrl": "https://www.medifonews.com/news/article.html?no=135497",
+        "regionId": 229,
+        "sourceType": "news",
+        "isVerified": true
+      }
+    ]
+  }
+
+]

@@ -28,7 +28,7 @@ class Timeline(Base):
     source_url = Column(String(500), nullable=False, default="")
     source_type = Column(String(20), nullable=False, default="")
 
-    created_by_id = Column(BigInteger, ForeignKey("user.id"), nullable=True)
+    created_by_id = Column(BigInteger, ForeignKey("users.id"), nullable=True)
     created_by = relationship("User")
 
     is_verified = Column(Boolean, server_default=text("FALSE"), nullable=False)

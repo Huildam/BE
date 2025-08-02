@@ -22,6 +22,7 @@ app.add_middleware(
 
 app.include_router(health_router, prefix="/health", tags=["health"])
 app.include_router(auth_router, prefix="/auth", tags=["auth"])
+app.include_router(event_router, prefix="/events", tags=["event"])
 
 @app.on_event("startup")
 async def on_startup():

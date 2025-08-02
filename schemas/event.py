@@ -1,10 +1,10 @@
 from datetime import date, datetime
 from typing import List, Optional
 
+from schemas.auth import UserResponse
 from schemas.base import CamelModel
 from schemas.region import RegionSchema
 from schemas.timeline import TimelineSchema
-from schemas.user import UserSchema
 
 
 class EventSchema(CamelModel):
@@ -21,7 +21,7 @@ class EventSchema(CamelModel):
     source_name: str
     source_url:  str
     source_type: str
-    created_by: UserSchema
+    created_by: UserResponse
     created_at: datetime
     updated_at: datetime
     is_verified: bool

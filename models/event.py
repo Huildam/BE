@@ -47,7 +47,7 @@ class Event(Base):
     source_name = Column(String, nullable=False, default="")
 
     # 생성자(User) 테이블과의 FK 관계
-    created_by_id = Column(Integer, ForeignKey("user.id"), nullable=False)
+    created_by_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     created_by = relationship("User", back_populates="created_events")
 
     created_at = Column(

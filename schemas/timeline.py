@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Optional
 
 from schemas.base import CamelModel
-from schemas.user import UserSchema
+from schemas.auth import UserResponse
 
 
 class TimelineSchema(CamelModel):
@@ -14,7 +14,7 @@ class TimelineSchema(CamelModel):
     source_name: str
     source_type: str
     source_url: str
-    created_by: UserSchema
+    created_by: UserResponse
     is_verified: bool
     verified_at: Optional[datetime] = None
     created_at: datetime
